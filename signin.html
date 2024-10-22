@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sign up
+    </title> 
+
+    <link rel="stylesheet" href="SignUpStyle.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</head>
+<body>
+
+    <div class="square">
+        <h2>Sign up</h2>
+
+        <form action="netflix login.html" method="post" id="form">
+
+        <label for="username"></label>
+        <input type="text" id="username" class="input" required placeholder="Enter username..">
+
+        <label for="password"></label>
+        <input type="password" id="password" class="input" required minlength="6" placeholder="Enter password..">
+
+        
+
+        <label for="email".></label>
+        <input type="email" id="email" class="input" placeholder="Enter your email..">
+
+        <select>
+        <option>Choose your gender..</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        </select>
+
+        <label for="bday"></label>
+        <input type="date" id="bday" class="input" ><br>
+        
+        <label for="phone"></label>
+        <input type="tel" id="phone"><br><br>
+
+        <button class="button" type="submit">Create account</button>
+
+        <div id="login">Already have an account?
+            <a href="netflix login.html">Log in.</a>
+    </div>
+       
+    </form>
+</div>
+</body>
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+
+</html>

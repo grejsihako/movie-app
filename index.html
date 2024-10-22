@@ -1,0 +1,242 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">CineAlb</h1>
+            </div>
+            <div class="menu-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <button id="searchButton" onclick="searchMovies()">Search</button>
+                </div>
+              
+    
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.png" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text" id="input"></span>
+                    <i id="usermenu" class="fas fa-caret-down clickable" onclick="toggleProfileOptions()"></i>
+
+                    <div id="profileBox" class="hidden">
+                        <div id="logoutContainer">
+                            <i class="fas fa-sign-out clickable" onclick="logout()"></i>
+                            <span>Log Out</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="sidebar">
+        <i id="homeicon" class="left-menu-icon fa-solid fa-house clickable"></i>
+        <!-- <i id="searchicon" class="left-menu-icon fa-solid fa-magnifying-glass clickable"></i> -->
+        <i id="usericon" class="left-menu-icon fa-solid fa-user clickable"></i>
+    </div>
+    <div class="container">
+        <div class="search-results"></div>
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('img/background1.jpg');">
+                <img class="featured-title" src="img/titlee.png" alt="">
+                <p class="featured-desc">In Chicago, the McCallister family is preparing for a Christmas vacation in Paris. On the night before their departure, the entire family gathers at Peter and Kate’s home, where their son, Kevin, is ridiculed by his siblings and cousins</p>
+                <button class="featured-button">WATCH NOW</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/Charlie-and-the-Chocolate-Factory-1.webp" alt="">
+                            <span class="movie-list-item-title">Charlie and the chocolate factory</span>
+                            <p class="movie-list-item-desc">A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film2.jpeg" alt="">
+                            <span class="movie-list-item-title">Hypnotic </span>
+                            <p class="movie-list-item-desc">A detective investigates a mystery involving his missing daughter and a secret government program.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film3.jpeg" alt="">
+                            <span class="movie-list-item-title">How To Lose A Guy In 10 Days</span>
+                            <p class="movie-list-item-desc">Benjamin Barry is an advertising executive and ladies' man who, to win a big campaign, bets that he can make a woman fall in love with him in 10 days.</p>
+                    
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film4.jpeg" alt="">
+                            <span class="movie-list-item-title">10 Things I hate About You </span>
+                            <p class="movie-list-item-desc">A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film5.jpeg" alt="">
+                            <span class="movie-list-item-title">Primal Fear </span>
+                            <p class="movie-list-item-desc">An altar boy is accused of murdering a priest, and the truth is buried several layers deep.</p>
+                             
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film6.jpeg" alt="">
+                            <span class="movie-list-item-title">Invisible Guest</span>
+                            <p class="movie-list-item-desc">A successful entrepreneur accused of murder and a witness preparation expert have less than three hours to come up with an impregnable defense.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film1.1.jpg" alt="">
+                            <span class="movie-list-item-title">Anyone But You </span>
+                            <p class="movie-list-item-desc">After an amazing first date, Bea and Ben's fiery attraction turns ice-cold--until they find themselves unexpectedly reunited at a destination wedding in Australia. So they do what any two mature adults would do: pretend to be a couple.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film1.2.jpg" alt="">
+                            <span class="movie-list-item-title"> Priscilla</span>
+                            <p class="movie-list-item-desc">When teenage Priscilla Beaulieu meets Elvis Presley, the man who is already a meteoric rock-and-roll superstar becomes someone entirely unexpected in private moments: a thrilling crush, an ally in loneliness, a vulnerable best friend.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film1.3.jpg" alt="">
+                            <span class="movie-list-item-title">Someone Great</span>
+                            <p class="movie-list-item-desc">After a devastating break up on the eve of her cross-country move, Jenny enjoys one last NYC adventure with her two best pals. Someone Great is a romantic comedy about love, loss, growth and the everlasting bond of female friendship.</p>
+                               
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>  
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">TRENDING</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film7.jpeg" alt="">
+                            <span class="movie-list-item-title">Mean Girls</span>
+                            <p class="movie-list-item-desc">Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film8.jpg" alt="">
+                            <span class="movie-list-item-title">The Princess Diaries</span>
+                            <p class="movie-list-item-desc">Mia Thermopolis has just found out that she is the heir apparent to the throne of Genovia. With her friends Lilly and Michael Moscovitz in tow, she tries to navigate through the rest of her sixteenth year.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film9.jpg" alt="">
+                            <span class="movie-list-item-title">The Holiday </span>
+                            <p class="movie-list-item-desc">Two women troubled with guy-problems swap homes in each other's countries, where they each meet a local guy and fall in love.</p>
+                    
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film10.jpeg" alt="">
+                            <span class="movie-list-item-title">Why Him? </span>
+                            <p class="movie-list-item-desc">A holiday gathering threatens to go off the rails when Ned Fleming realizes that his daughter's Silicon Valley millionaire boyfriend is about to pop the question.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film11.jpeg" alt="">
+                            <span class="movie-list-item-title">Love And Other Drugs</span>
+                            <p class="movie-list-item-desc">In 1990s Pittsburgh, a medicine peddler starts a relationship with a young woman suffering from Parkinson's disease.</p>
+                             
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film12.jpeg" alt="">
+                            <span class="movie-list-item-title">The Devil Wears Prada</span>
+                            <p class="movie-list-item-desc">A smart but sensible new graduate lands a job as an assistant to Miranda Priestly, the demanding editor-in-chief of a high fashion magazine.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film2.1.jpg" alt="">
+                            <span class="movie-list-item-title">Interstellar</span>
+                            <p class="movie-list-item-desc">When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film2.2.jpg" alt="">
+                            <span class="movie-list-item-title">Parasite</span>
+                            <p class="movie-list-item-desc">Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/film2.3.jpg" alt="">
+                            <span class="movie-list-item-title">Good Will Hunting</span>
+                            <p class="movie-list-item-desc">Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.</p>
+                              
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>  
+            <div class="featured-content"
+            style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('img/background2.webp');">
+            <img class="featured-title" src="img/title2.png" alt="">
+            <p class="featured-desc">Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.</p>
+            <button class="featured-button">WATCH NOW</button>
+        </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">KIDS</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid1.jpeg" alt="">
+                            <span class="movie-list-item-title">Inside Out</span>
+                            <p class="movie-list-item-desc">After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.</p>
+                              
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid2.jpeg" alt="">
+                            <span class="movie-list-item-title">Tangled </span>
+                            <p class="movie-list-item-desc">The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time, and who she really is.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid3.jpeg" alt="">
+                            <span class="movie-list-item-title">Barbie and the Diamond Castle</span>
+                            <p class="movie-list-item-desc">Two best friends, Liana and Alexa, embark on a journey to find the Diamond Castle! With the help of music, the girls overcome challenges that show friendship is the true treasure</p>
+                    
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid4.jpeg" alt="">
+                            <span class="movie-list-item-title">Spirit </span>
+                            <p class="movie-list-item-desc">A captured mustang remains determined to return to his herd no matter what.</p>
+                               
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid5.jpg" alt="">
+                            <span class="movie-list-item-title">Coco</span>
+                            <p class="movie-list-item-desc">Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.</p>
+                             
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/kid6.jpeg" alt="">
+                            <span class="movie-list-item-title">Baby Boss</span>
+                            <p class="movie-list-item-desc">A suit-wearing, briefcase-carrying baby pairs up with his 7-year old brother to stop the dastardly plot of the CEO of Puppy Co.</p>
+                              
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>  
+
+        </div>
+    </div>
+<script src="app.js"></script>
+
+</body>
+
+</html>

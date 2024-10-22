@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-image: url(https://repository-images.githubusercontent.com/299409710/b42f7780-0fe1-11eb-8460-e459acd20fb4) ;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+    
+            .profile-container {
+                background-color: #333;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+            }
+    
+            .profile-image {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+    
+            .profile-name {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+    
+            .profile-details {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+    
+            .profile-button {
+                background-color: #e50914;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    
+   
+    <div class="profile-container">
+        <div> <img class="profile-image" src="img/profile.png"></div>
+    <div class="profile-name" id="input"></div>
+
+        <div class="profile-details" id="profileDetails"></div><br>
+        <button class="profile-button" onclick="navigateToPlansPage()">Change Subscription Plan</button>
+    </div></div>
+
+    
+    <script>
+
+   document.getElementById("input").innerHTML=localStorage.getItem("user-name");       
+   document.getElementById('profileDetails').innerText = `Subscription: Premium`;
+   
+   function navigateToPlansPage() {
+        window.location.href = "plans.html";
+    }
+
+    </script>
+
+    </body>
+</html>
